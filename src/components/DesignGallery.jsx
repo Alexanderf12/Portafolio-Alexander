@@ -39,22 +39,29 @@ export default function DesignGallery() {
             </div>
           </div>
 
-          {/* Gallery grid */}
-          <div className="design-gallery-grid">
-            {d.images.map((item) => (
-              <div className="design-gallery-item" key={item.src}>
-                <img
-                  src={item.src}
-                  alt={item.label}
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                    e.currentTarget.nextElementSibling.style.display = "flex";
-                  }}
-                />
-                <div className="design-img-placeholder" style={{ display: "none" }}>
-                  {item.label}
+          {/* Categorized gallery */}
+          <div className="design-categories-wrap">
+            {d.categories.map((cat) => (
+              <div className="design-category" key={cat.label}>
+                <p className="design-cat-title">{cat.label}</p>
+                <div className={`design-gallery-grid design-gallery-${cat.variant}`}>
+                  {cat.images.map((item) => (
+                    <div className="design-gallery-item" key={item.src}>
+                      <img
+                        src={item.src}
+                        alt={item.label}
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                          e.currentTarget.nextElementSibling.style.display = "flex";
+                        }}
+                      />
+                      <div className="design-img-placeholder" style={{ display: "none" }}>
+                        {item.label}
+                      </div>
+                      <div className="design-gallery-label">{item.label}</div>
+                    </div>
+                  ))}
                 </div>
-                <div className="design-gallery-label">{item.label}</div>
               </div>
             ))}
           </div>

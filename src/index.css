@@ -776,28 +776,54 @@ section { padding: 88px 0; }
   color: var(--text);
 }
 
-/* Design images grid */
+/* ---- Design: categorized gallery ---- */
+.design-categories-wrap {
+  padding: 28px 36px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.design-cat-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+/* Grid base */
 .design-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 4px;
+  border-radius: 10px;
+  overflow: hidden;
 }
+
+/* Brand identity — 3 cols, 3:2 */
+.design-gallery-brand { grid-template-columns: repeat(3, 1fr); }
+.design-gallery-brand .design-gallery-item { aspect-ratio: 3 / 2; }
+
+/* Social media — 4 cols, 4:5 (Instagram portrait) */
+.design-gallery-social { grid-template-columns: repeat(4, 1fr); }
+.design-gallery-social .design-gallery-item { aspect-ratio: 4 / 5; }
+
+/* Mockups — 3 cols, 3:2 landscape */
+.design-gallery-mockup { grid-template-columns: repeat(3, 1fr); }
+.design-gallery-mockup .design-gallery-item { aspect-ratio: 3 / 2; }
 
 .design-gallery-item {
   position: relative;
   overflow: hidden;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  aspect-ratio: 1 / 1;
+  background: var(--surface-2);
 }
-
-.design-gallery-item:nth-child(3n) { border-right: none; }
-.design-gallery-item:nth-last-child(-n+3) { border-bottom: none; }
 
 .design-gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.5s ease;
 }
 
@@ -806,13 +832,13 @@ section { padding: 88px 0; }
 .design-gallery-label {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.6));
+  background: linear-gradient(transparent, rgba(0,0,0,0.65));
   color: #fff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  padding: 20px 14px 12px;
+  padding: 28px 12px 10px;
   opacity: 0;
   transition: opacity var(--transition);
 }
@@ -993,11 +1019,11 @@ footer {
 
   .projects-grid-2 { grid-template-columns: 1fr; }
 
-  .design-gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .design-gallery-item:nth-child(3n) { border-right: 1px solid var(--border); }
-  .design-gallery-item:nth-child(2n) { border-right: none; }
-  .design-gallery-item:nth-last-child(-n+3) { border-bottom: 1px solid var(--border); }
-  .design-gallery-item:nth-last-child(-n+2) { border-bottom: none; }
+  .design-categories-wrap { padding: 24px 20px 28px; gap: 24px; }
+  .design-gallery-brand  { grid-template-columns: 1fr; }
+  .design-gallery-brand .design-gallery-item { aspect-ratio: 3 / 2; }
+  .design-gallery-social { grid-template-columns: repeat(2, 1fr); }
+  .design-gallery-mockup { grid-template-columns: 1fr; }
 
   .design-client-header { flex-direction: column; gap: 16px; }
 

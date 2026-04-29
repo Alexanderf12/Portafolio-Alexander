@@ -124,13 +124,42 @@ export const designProject = {
     { name: "Illustrator", icon: "SiAdobeillustrator" },
     { name: "Photoshop", icon: "SiAdobephotoshop" },
   ],
-  images: [
-    { src: "/design/Presentación de Logo.jpg", label: "Sistema de marca" },
-    { src: "/design/BB DISEÑO IG.jpg", label: "Redes sociales" },
-    { src: "/design/DISEÑO IG MUJER.jpg", label: "Redes sociales" },
-    { src: "/design/IG DIA DEL TRABAJADOR.jpg", label: "Redes sociales" },
-    { src: "/design/MOCKUPS TARJETAS DE PRESENTACION2.jpg", label: "Tarjetas de presentación" },
-    { src: "/design/DISEÑO IG MIGRACION.jpg", label: "Redes sociales" },
+  categories: [
+    {
+      label: "Identidad de marca",
+      variant: "brand",
+      images: [
+        { src: "/design/Presentación de Logo.jpg",  label: "Presentación de Logo" },
+        { src: "/design/Presentación de Logo2.jpg", label: "Presentación de Logo 2" },
+        { src: "/design/Presentación de Logo3.jpg", label: "Presentación de Logo 3" },
+      ],
+    },
+    {
+      label: "Redes sociales",
+      variant: "social",
+      images: [
+        { src: "/design/BB DISEÑO IG.jpg",           label: "BB Diseño IG" },
+        { src: "/design/DISEÑO IG.jpg",               label: "Diseño IG" },
+        { src: "/design/DISEÑO IG2.jpg",              label: "Diseño IG 2" },
+        { src: "/design/DISEÑO IG MUJER.jpg",         label: "Día Internacional de la Mujer" },
+        { src: "/design/DISEÑO IG MIGRACION.jpg",     label: "Legaliza tu residencia" },
+        { src: "/design/DISEÑO SOCIAL MEDIA.jpg",     label: "Servicios especializados" },
+        { src: "/design/CARRUSEL IG 1.jpg",           label: "Carrusel IG 1" },
+        { src: "/design/CARRUSEL IG 2.jpg",           label: "Carrusel IG 2" },
+        { src: "/design/IG DIA DEL TRABAJADOR.jpg",   label: "Día del Trabajador" },
+        { src: "/design/judicial-02.jpg",             label: "Comprometidos con la justicia" },
+        { src: "/design/Post de Instagram Agente de Bienes Raices Verde.jpg", label: "Bienes Raíces" },
+      ],
+    },
+    {
+      label: "Mockups",
+      variant: "mockup",
+      images: [
+        { src: "/design/MOCKUPS TARJETAS DE PRESENTACION1.jpg", label: "Tarjetas de presentación" },
+        { src: "/design/MOCKUPS TARJETAS DE PRESENTACION2.jpg", label: "Tarjetas de presentación" },
+        { src: "/design/MOCKUPS TARJETAS DE PRESENTACION3.jpg", label: "Tarjetas de presentación" },
+      ],
+    },
   ],
 };
 
