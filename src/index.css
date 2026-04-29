@@ -804,6 +804,10 @@ section { padding: 88px 0; }
 /* Brand identity — 3 cols, 3:2 */
 .design-gallery-brand { grid-template-columns: repeat(3, 1fr); }
 .design-gallery-brand .design-gallery-item { aspect-ratio: 3 / 2; }
+.design-gallery-brand .design-gallery-item img {
+  object-fit: contain;
+  background: var(--surface-2);
+}
 
 /* Social media — 4 cols, 4:5 (Instagram portrait) */
 .design-gallery-social { grid-template-columns: repeat(4, 1fr); }
