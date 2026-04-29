@@ -22,7 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Archivos de imagen muy pesados (no usados en el sitio)
-public/design/Presentación de Logo2.jpg
-public/design/Presentación de Logo3.jpg
